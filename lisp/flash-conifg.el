@@ -1,4 +1,4 @@
-;;; avy.el --- Description -*- lexical-binding: t; -*-
+;;; flash-config.el --- Description -*- lexical-binding: t; -*-
 
 (use-package flash
   :ensure t
