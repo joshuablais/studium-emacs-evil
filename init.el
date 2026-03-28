@@ -77,7 +77,7 @@
       auto-revert-verbose nil)
 
 ;; testing for package timings
-;; (setq use-package-compute-statistics t)
+(setq use-package-compute-statistics t)
 
 ;; autosaving
 (setq auto-save-default t)
