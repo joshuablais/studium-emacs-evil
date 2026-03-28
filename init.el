@@ -127,6 +127,9 @@
 (custom-set-faces
  '(hl-line ((t (:background "#22262b" :foreground unspecified :extend t)))))
 
+;; Opacity
+(add-to-list 'default-frame-alist '(alpha-background . 90))
+
 (use-package which-key
   :defer 1
   :config
@@ -166,6 +169,7 @@
 (elpaca-wait)
 
 (require 'evil-config)
+(require 'dashboard)
 (require 'keys)
 (require 'magit-config)
 (require 'mail)
