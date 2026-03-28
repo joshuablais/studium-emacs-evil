@@ -144,7 +144,7 @@
 (require 'magit-config)
 (require 'mail)
 (require 'move-text-config)
-(require 'avy-config)
+(require 'flash-config)
 (require 'pass-config)
 (require 'org-caldav-config)
 (require 'markdown)
