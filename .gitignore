@@ -11,6 +11,10 @@ eln-cache/
 tree-sitter/
 .cache/
 places/
+var/
+etc/
+easysession/
+persistent-scratch
 recentf/
 savehist/
 elfeed.org
