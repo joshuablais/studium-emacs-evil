@@ -23,7 +23,7 @@
   :ensure t
   :after elfeed
   :custom
-  (rmh-elfeed-org-files '("~/.emacs.vanilla/elfeed.org"))
+  (rmh-elfeed-org-files '("~/.config/emacs/elfeed.org"))
   :config
   (elfeed-org))
 

@@ -41,7 +41,7 @@
 (use-package yasnippet
   :ensure t
   :config
-  (setq yas-snippet-dirs '("~/.emacs.vanilla/snippets")
+  (setq yas-snippet-dirs '("~/.config/emacs/snippets")
         yas-verbosity    0)
   (yas-global-mode 1))
 

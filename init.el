@@ -8,7 +8,7 @@
 
 ;; Setup MELPA
 (require 'package)
-(setq package-user-dir "~/.emacs.vanilla/var/elpa/")
+(setq package-user-dir "~/.config/emacs/var/elpa/")
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
@@ -22,8 +22,8 @@
 ;; point packages to etc/var for cleaner directory structure (gitignored)
 (use-package no-littering
   :init
-  (setq no-littering-etc-directory "~/.emacs.vanilla/etc/"
-        no-littering-var-directory "~/.emacs.vanilla/var/")
+  (setq no-littering-etc-directory "~/.config/emacs/etc/"
+        no-littering-var-directory "~/.config/emacs/var/")
   :config
   (setq auto-save-file-name-transforms
         `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))

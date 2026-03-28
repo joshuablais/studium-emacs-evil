@@ -140,13 +140,13 @@
 ;; config hotkey
 (define-key leader (kbd "f p")
             (lambda () (interactive)
-              (let ((default-directory "~/.emacs.vanilla/"))
+              (let ((default-directory "~/.config/emacs/"))
                 (call-interactively #'find-file))))
 
 ;; snippets hotkey
 (define-key leader (kbd "f s")
             (lambda () (interactive)
-              (let ((default-directory "~/.emacs.vanilla/snippets/"))
+              (let ((default-directory "~/.config/emacs/snippets/"))
                 (call-interactively #'find-file))))
 
 (provide 'keys)
