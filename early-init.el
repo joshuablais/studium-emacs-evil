@@ -4,6 +4,9 @@
 (setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 1.0)
 
+;; Opacity
+(add-to-list 'default-frame-alist '(alpha-background . 90))
+
 (add-hook 'emacs-startup-hook
           (lambda ()
             (setq gc-cons-threshold (* 2 1024 1024)

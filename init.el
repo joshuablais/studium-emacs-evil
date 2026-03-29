@@ -52,8 +52,9 @@
 
 (setq use-package-always-defer t
       use-package-always-ensure t
-      use-package-expand-minimally t
-      use-package-compute-statistics t)
+      ;; Testing for package timing
+      ;; use-package-compute-statistics t
+      use-package-expand-minimally t)
 
 ;; no-littering must run before anything writes files
 (setq custom-file (expand-file-name "etc/custom.el" user-emacs-directory))
@@ -65,10 +66,8 @@
         no-littering-var-directory  "~/.local/share/emacs/")
   :config
   (setq auto-save-file-name-transforms
-        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
-  (setq backup-directory-alist
-        `((".*" . ,(no-littering-expand-var-file-name "backup/")))))
-(elpaca-wait) ; block until no-littering is fully built and configured
+        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
+  (elpaca-wait) ; block until no-littering is fully built and configured
 (when (file-exists-p custom-file)
   (load custom-file))
 
@@ -125,21 +124,19 @@
   :config
   (load-theme 'compline t))
 
-(custom-set-faces
- '(hl-line ((t (:background "#22262b" :foreground unspecified :extend t)))))
-
-;; Opacity
-(add-to-list 'default-frame-alist '(alpha-background . 90))
+(with-eval-after-load 'hl-line
+  (set-face-attribute 'hl-line nil
+                      :background "#22262b"
+                      :foreground 'unspecified
+                      :extend t))
 
 (use-package which-key
-  :defer 1
   :config
   (setq which-key-idle-delay 0.2)
   (which-key-mode 1))
 
 (use-package recentf
   :ensure nil
-  :defer 1
   :config
   (setq recentf-max-menu-items 25
         recentf-max-saved-items 100)
@@ -151,7 +148,6 @@
 
 (use-package savehist
   :ensure nil
-  :defer 1
   :config
   (setq history-length 1000
         history-delete-duplicates t
