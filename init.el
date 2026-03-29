@@ -1,5 +1,6 @@
 ;;; init.el -*- lexical-binding: t; -*-
 
+;; Username setup
 (setq user-full-name "Joshua Blais"
       user-mail-address "josh@joshblais.com")
 (setq auth-sources '("~/.authinfo.gpg" "~/.authinfo")
@@ -162,11 +163,11 @@
                  recentf-list))
     (add-to-list 'savehist-additional-variables var)))
 
+(elpaca-wait)
+
 ;; Modules
 (add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/custom/" user-emacs-directory))
-
-(elpaca-wait)
 
 (require 'evil-config)
 (require 'dashboard)
